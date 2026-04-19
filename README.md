@@ -44,3 +44,6 @@ Here I have created 10 nodes in jenkins UI and added the naming as predictable a
 
 
 We can even Have the jenkins api included here and do this when evey things are required.
+
+
+#The Connectione Between the Master ans slave hosts are estalished By JNLP stands for Java Network Launch Protocol
