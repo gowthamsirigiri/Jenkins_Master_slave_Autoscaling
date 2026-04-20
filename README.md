@@ -27,7 +27,9 @@ Create a launch configuration or template with a base AMI (with Docker installed
 
 In the user data script, include:
 
-#Need to add the curl herw ill do
+#Below curl need to run on the slave host to establish the connection netween master and slave and other config
+curl-so http://localhost:8080/jnlpJars/agent.jar
+java -jar agent.jar -url http://Ec2_IP_address:8080/-secret 8812f6bc9321d5523798a42405152ee776a3e45936611f060f3a8d7cf3678a59 -name Run01 websocket -workDir "/user/jenkins-files"
 
 ***Configure an auto-scaling group (min: 1, max: 10) with the user data script.***
 
