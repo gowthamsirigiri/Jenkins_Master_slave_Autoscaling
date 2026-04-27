@@ -51,4 +51,4 @@ User Data Script: Include the EC2
 Here I have created 10 nodes in jenkins UI and added the naming as predictable agent-1,agent-2......
 
 
-# The Connectione Between the Master ans slave hosts are estalished By JNLP stands for Java Network Launch Protocol
+#The Connectione Between the Master ans slave hosts are estalished By JNLP stands for Java Network Launch Protocol
