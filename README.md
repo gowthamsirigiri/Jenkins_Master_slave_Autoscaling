@@ -18,11 +18,11 @@ This project automates the scaling of CI/CD infrastructure, eliminating the need
 - Launch an EC2 instance (e.g., t2.micro etc).
 - Install Docker and pull the official Jenkins image:
 
-#Expose the Ports 8080 for runing the Jenkins , 5000 for agent connectivity
+## Expose the Ports 8080 for runing the Jenkins , 5000 for agent connectivity
 
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins-master jenkins/jenkins:lts
 
-#Below is the model Url 
+### Below is the sample url 
 Access Jenkins UI on http://<your-ec2-public-ip>:8080
 
 Configure security, plugins, and the "Docker" plugin.
@@ -31,9 +31,9 @@ Configure security, plugins, and the "Docker" plugin.
 
 Create a launch configuration or template with a base AMI (with Docker installed).
 
-In the user data script, include:
+In the user data script, include the below steps:
 
-#Below curl need to run on the slave host to establish the connection netween master and slave and other config
+## Below curl need to run on the slave host to establish the connection netween master and slave and other config
 curl-so http://localhost:8080/jnlpJars/agent.jar
 java -jar agent.jar -url http://Ec2_IP_address:8080/-secret 8812f6bc9321d5523798a42405152ee776a3e45936611f060f3a8d7cf3678a59 -name Run01 websocket -workDir "/user/jenkins-files"
 
@@ -51,4 +51,4 @@ User Data Script: Include the EC2
 Here I have created 10 nodes in jenkins UI and added the naming as predictable agent-1,agent-2......
 
 
-#The Connectione Between the Master ans slave hosts are estalished By JNLP stands for Java Network Launch Protocol
+**The Connectione Between the Master ans slave hosts are estalished By JNLP stands for Java Network Launch Protocol**
