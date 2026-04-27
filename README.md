@@ -2,6 +2,8 @@
 ## Overview
 This repository outlines a blueprint for a Jenkins master-agent setup using Docker and AWS EC2 auto-scaling. The master coordinates jobs, while agent nodes spin up on-demand in an auto-scaling group.
 
+##Note: This is only applicable if concurrent job execution is enabled on the agent; this allows the ASG to scale and spin up new nodes based on CPU load or other performance metrics.....
+
 ## Architecture
 - **Master Node**: Runs Jenkins on a dedicated EC2 instance.
 - **Agents**: Dynamically provisioned EC2 instances via auto-scaling, connected to the master as Jenkins agents.
