@@ -18,7 +18,7 @@ This project automates the scaling of CI/CD infrastructure, eliminating the need
 - Launch an EC2 instance (e.g., t2.micro etc).
 - Install Docker and pull the official Jenkins image:
 
-## Expose the Ports 8080 for runing the Jenkins , 5000 for agent connectivity
+## Expose the Ports 8080 for runing the Jenkins , 50000 for agent connectivity
 
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins-master jenkins/jenkins:lts
 
